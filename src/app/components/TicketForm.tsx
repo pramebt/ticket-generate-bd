@@ -113,8 +113,8 @@ const TicketForm: React.FC = () => {
           <label className="text-white font-semibold text-lg mb-4">
             Fullname
           </label>
-          <div className="border border-gray-400 rounded-sm mt-2 w-100 h-10 bg-gray-600/20">
-            <input type="text" />
+          <div className="flex">
+            <input type="text" className="border border-gray-400 rounded-sm mt-2 w-100 h-10 bg-gray-600/20" />
           </div>
         </div>
       </div>
@@ -124,8 +124,8 @@ const TicketForm: React.FC = () => {
           <label className="text-white font-semibold text-lg mb-4">
             Email Address
           </label>
-          <div className="border border-gray-400 rounded-sm mt-2 w-100 h-10 bg-gray-600/20">
-            <input type="text" />
+          <div className="flex ">
+            <input type="text" className ="border border-gray-400 rounded-sm mt-2 w-100 h-10 bg-gray-600/20" />
           </div>
         </div>
       </div>
@@ -135,8 +135,8 @@ const TicketForm: React.FC = () => {
           <label className="text-white font-semibold text-lg mb-4">
             GitHub Username
           </label>
-          <div className="border border-gray-400 rounded-sm mt-2 w-100 h-10 bg-gray-600/20">
-            <input type="text" />
+          <div className="flex">
+            <input type="text" className="border border-gray-400 rounded-sm mt-2 w-100 h-10 bg-gray-600/20"/>
           </div>
         </div>
       </div>
