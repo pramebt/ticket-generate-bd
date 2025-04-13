@@ -21,7 +21,7 @@ const Ticket = () => {
         <div className="bg-[url('/assets/images/pattern-ticket.svg')] bg-contain bg-no-repeat w-full max-w-lg mx-auto aspect-15/7 mt-10
             grid grid-cols-[85%_15%] grid-rows-2 grid-flow-col p-5 items-center md:gap-y-10">
             <div className='grid grid-cols-[20%_auto] grid-rows-2'>
-                <Image src='/assets/images/logo-mark.svg' alt='Logo' className='row-span-2 self-center' width={40} height={40} />
+                <Image src='/assets/images/logo-mark.svg' alt='Logo' width={100} height={100} className='w-10 row-span-2 self-center'  />
                 <h3 className='text-xl font-bold md:text-2xl'>Coding Conf</h3>
                 <span className='text-sm text-neutral-400 font-light md:text-lg'>Jan 31, 2025 / Austin, TX</span>
             </div>
@@ -38,7 +38,7 @@ const Ticket = () => {
                 )}
                 <h3 className='text-xl md:text-2xl'>{fullname}</h3>
                 <div className='flex gap-2 content-center self-center'>
-                    <Image src='/assets/images/icon-github.svg' alt='github-logo' className='aspect-square w-5' />
+                    <Image src='/assets/images/icon-github.svg' width={100} height={100} alt='github-logo' className='w-5 aspect-square ' />
                     <span className='text-sm text-neutral-400 font-light md:text-lg'>{github}</span>
                 </div>
             </div>

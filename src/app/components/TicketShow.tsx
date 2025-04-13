@@ -16,7 +16,7 @@ const TicketShowContent = () => {
           Congrats, <span className="text-linear-gradient">{fullname}</span> Your ticket is ready.
         </h1>
         <p className="text-gray-400">
-          We&apos;ve emailed you ticket to <h1 className="text-orange-500">{email}</h1> and will send updates in the run-up to the event.
+          We&apos;ve emailed you ticket to <span className="text-orange-500">{email}</span> and will send updates in the run-up to the event.
         </p>
       </div>
 
