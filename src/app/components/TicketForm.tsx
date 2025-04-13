@@ -1,5 +1,5 @@
 "use client"; // บอก Next.js ว่าไฟล์นี้เป็น client component (ใช้ React hooks ได้)
-
+import Image from "next/image";
 import React, { useState } from "react";
 import DragAndDrop from "./DragAndDrop";
 import { useRouter } from "next/navigation";
@@ -11,15 +11,28 @@ const TicketForm: React.FC = () => {
   const [email, setEmail] = useState("");
   const [github, setGithub] = useState("");
   const [avatarFile, setAvatarFile] = useState<File | null>(null); // ⭐ รับไฟล์ avatar
+  const [emailError, setEmailError] = useState("");
 
+  
   const handleAvatarChange = (file: File) => {
     setAvatarFile(file);
   };
+
   const handleGenerateClick = () => {
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+    if (!isValidEmail) {
+      setEmailError("Please enter a valid email address.");
+      return;
+    } else {
+      setEmailError("");
+    }
+
     if (avatarFile) {
       const imageUrl = URL.createObjectURL(avatarFile);
-      localStorage.setItem("avatarUrl", imageUrl); // 👉 เก็บ URL ชั่วคราวของรูป
+      localStorage.setItem("avatarUrl", imageUrl);
     }
+
     router.push(
       `/ticketshow?fullname=${encodeURIComponent(
         fullname
@@ -28,6 +41,7 @@ const TicketForm: React.FC = () => {
       )}`
     );
   };
+
   return (
     <div className="">
       {/* ส่วนหัวของหน้า */}
@@ -44,7 +58,7 @@ const TicketForm: React.FC = () => {
       {/* ส่วนอัปโหลด Avatar */}
       <div className="mt-10 flex flex-col items-center ">
         <div className="">
-          <DragAndDrop onFileChange={handleAvatarChange}/>
+          <DragAndDrop onFileChange={handleAvatarChange} />
         </div>
       </div>
       <div className="mt-5 flex flex-col items-center">
@@ -69,13 +83,27 @@ const TicketForm: React.FC = () => {
           <label className="text-white font-semibold text-lg mb-4">
             Email Address
           </label>
-          <div className="flex ">
+          <div className=" flex-col ">
             <input
               type="text"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="border border-gray-400 rounded-sm mt-2 w-100 h-10 bg-gray-600/20 text-white px-2"
+              className={`border rounded-sm mt-2 w-100 h-10 bg-gray-600/20 text-white px-2 ${
+                emailError ? "border-red-500" : "border-gray-400"
+              }`}
             />
+            {emailError && (
+              <div className="flex flex-row mt-2 gap-2">
+              <Image
+                          src="/assets/images/icon-info.svg"
+                          alt="icon upload"
+                          width={100}
+                          height={100}
+                          className="w-5"
+                        />
+              <p className="text-red-500 text-sm mt-1">{emailError}</p>
+              </div>
+            )}
           </div>
         </div>
       </div>
@@ -98,7 +126,7 @@ const TicketForm: React.FC = () => {
       <div className="flex justify-center mt-5">
         <button
           onClick={handleGenerateClick}
-          className="w-100 h-10 bg-amber-600 rounded-sm font-bold"
+          className="w-100 h-10 bg-white font-bold rounded-sm cursor-pointer"
         >
           Generate My Ticket
         </button>

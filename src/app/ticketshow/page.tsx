@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div
       className="
-    bg-black w-screen min-h-screen
+    bg-black w-screen min-h-screen px-4
   "
     >
       <Header />

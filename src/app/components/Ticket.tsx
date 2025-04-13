@@ -23,7 +23,7 @@ const Ticket = () => {
             <div className='grid grid-cols-[20%_auto] grid-rows-2'>
                 <Image src='/assets/images/logo-mark.svg' alt='Logo' width={100} height={100} className='w-10 row-span-2 self-center'  />
                 <h3 className='text-xl font-bold md:text-2xl'>Coding Conf</h3>
-                <span className='text-sm text-neutral-400 font-light md:text-lg'>Jan 31, 2025 / Austin, TX</span>
+                <span className='text-sm text-neutral-400 font-light md:text-lg'>Have a good day kub</span>
             </div>
             <div className='grid grid-cols-[20%_auto] grid-rows-2'>
                 {/* Only render the Image component if avatarUrl is not null */}
@@ -42,7 +42,9 @@ const Ticket = () => {
                     <span className='text-sm text-neutral-400 font-light md:text-lg'>{github}</span>
                 </div>
             </div>
-            <p className='row-span-2 text-2xl text-neutral-400 h-fit place-self-center self-center writing-vertical'>#01609</p>
+
+            <p className='row-span-2 text-xl text-neutral-400 h-fit place-self-center self-center'>#01609</p>
+            
         </div>
     );
 }
