@@ -1,7 +1,7 @@
 import Image from "next/image";
-import TicketForm from "./components/TicketForm";
+import TicketShow from "../components/TicketShow";
+import Header from "../components/Header";
 
-import Header from "./components/Header";
 const page = () => {
   return (
     <div
@@ -13,8 +13,8 @@ const page = () => {
   "
     >
       <Header />
-      <TicketForm/>
-     
+      <TicketShow/>
+
     </div>
   );
 };
