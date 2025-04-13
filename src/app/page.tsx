@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import TicketForm from "./components/TicketForm";
 
 import Header from "./components/Header";

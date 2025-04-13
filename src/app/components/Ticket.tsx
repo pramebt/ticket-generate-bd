@@ -6,9 +6,8 @@ import Image from 'next/image';
 
 const Ticket = () => {
     const searchParams = useSearchParams();
-    const fullname = searchParams.get("fullname");
-    const email = searchParams.get("email");
-    const github = searchParams.get("github");
+    const fullname = searchParams.get("fullname") || "Guest"; // Default to "Guest" if fullname is not available
+    const github = searchParams.get("github") || "N/A"; // Default to "N/A" if github is not available
 
     const [avatarUrl, setAvatarUrl] = useState<string | null>(null);
 
@@ -39,7 +38,7 @@ const Ticket = () => {
                 )}
                 <h3 className='text-xl md:text-2xl'>{fullname}</h3>
                 <div className='flex gap-2 content-center self-center'>
-                    <img src='/assets/images/icon-github.svg' alt='github-logo' className='aspect-square w-5' />
+                    <Image src='/assets/images/icon-github.svg' alt='github-logo' className='aspect-square w-5' />
                     <span className='text-sm text-neutral-400 font-light md:text-lg'>{github}</span>
                 </div>
             </div>

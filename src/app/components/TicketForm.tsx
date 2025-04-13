@@ -37,7 +37,7 @@ const TicketForm: React.FC = () => {
           2025 Starts Here!
         </h1>
         <p className="text-gray-400">
-          Secure your spot at next year's biggest coding conference.
+          Secure your spot at next year&apos;s biggest coding conference.
         </p>
       </div>
 

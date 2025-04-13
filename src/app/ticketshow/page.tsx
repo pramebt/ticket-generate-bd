@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import TicketShow from "../components/TicketShow";
 import Header from "../components/Header";
 
