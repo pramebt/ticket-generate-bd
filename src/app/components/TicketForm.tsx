@@ -123,7 +123,7 @@ const TicketForm: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex justify-center mt-5">
+      <div className="flex justify-center  p-10">
         <button
           onClick={handleGenerateClick}
           className="w-100 h-10 bg-white font-bold rounded-sm cursor-pointer"

@@ -21,9 +21,9 @@ const Ticket = () => {
         <div className="bg-[url('/assets/images/pattern-ticket.svg')] bg-contain bg-no-repeat w-full max-w-lg mx-auto aspect-15/7 mt-10
             grid grid-cols-[85%_15%] grid-rows-2 grid-flow-col p-5 items-center md:gap-y-10">
             <div className='grid grid-cols-[20%_auto] grid-rows-2'>
-                <Image src='/assets/images/logo-mark.svg' alt='Logo' width={100} height={100} className='w-10 row-span-2 self-center'  />
-                <h3 className='text-xl font-bold md:text-2xl'>Coding Conf</h3>
-                <span className='text-sm text-neutral-400 font-light md:text-lg'>Have a good day kub</span>
+                <div className=' row-span-2'></div> 
+                <h3 className='text-amber-500 text-xl font-bold md:text-2xl'>BD</h3>
+                <span className='text-sm text-white font-light md:text-lg'>Have a good day kub</span>
             </div>
             <div className='grid grid-cols-[20%_auto] grid-rows-2'>
                 {/* Only render the Image component if avatarUrl is not null */}
@@ -36,7 +36,7 @@ const Ticket = () => {
                         height={56}
                     />
                 )}
-                <h3 className='text-xl md:text-2xl'>{fullname}</h3>
+                <h3 className='text-xl md:text-2xl text-amber-500'>{fullname}</h3>
                 <div className='flex gap-2 content-center self-center'>
                     <Image src='/assets/images/icon-github.svg' width={100} height={100} alt='github-logo' className='w-5 aspect-square ' />
                     <span className='text-sm text-neutral-400 font-light md:text-lg'>{github}</span>
